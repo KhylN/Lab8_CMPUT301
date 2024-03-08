@@ -45,6 +45,10 @@ public class CustomList extends ArrayAdapter<City> {
 
     }
 
+    public ArrayList<City> getCities() {
+        return cities;
+    }
+
     /**
      * this gets size of the list
      * @return
@@ -67,8 +71,21 @@ public class CustomList extends ArrayAdapter<City> {
         cities.add(city);
     }
 
+    /**
+     * This determines weather a city object belongs in the list of cities
+     * @return
+     * Return the boolean value, 1 for true/city belongs in the list and 0 for false/city does not belong in the list
+     */
     public boolean hasCity(City city) {
         return (city.equals(new City(city.getCityName(), city.getProvinceName())));
+    }
+
+    /**
+     * This deletes a given city object form the list of cities
+     * @param city
+     * This is a candidate city to delete
+     */
+    public void deleteCity(City city) {
     }
 
 }

@@ -44,5 +44,13 @@ public class CustomListTest {
         assertTrue(city.getClass() == city2.getClass());
     }
 
+    @Test
+    void testDeleteCity() {
+        CustomList cityList = MockCityList();
+        assertEquals(1,cityList.getCities().size());
+        cityList.deleteCity(cityList.getCities().get(0));
+        assertEquals(0,cityList.getCities().size());
+    }
+
 
 }
